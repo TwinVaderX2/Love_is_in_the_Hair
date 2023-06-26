@@ -1,0 +1,101 @@
+<!-- index.html "homepage"-->
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title %}Love is in the Hair - Home{% endblock %}
+
+{% block main %} 
+<br><div class = "row"></div><br>
+<div class = "row">
+    <h1 id="wrapper" style = "color: white">Welcome to Love is in the Hair</h1>
+</div>
+<br><div class = "row"></div><br>
+<div class = "row">
+    <div class = "col-lg-2"></div>
+    <div class = "col-lg-8">
+        <!-- add sliding fotos on landing page-->
+        <!-- tutorial followed on https://www.youtube.com/watch?v=ku_97a6Bgkg -->
+
+        <div id="myCarousel" class="carousel slide" data-ride = "carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            </div>
+            <div class = "carousel-inner">
+                <div class = "carousel-item active" > <!-- first slide set to active -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/child_blond_curly_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- second slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/blond_short.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- third slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/black_red_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- fourth slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/brown_red_curly_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- fifth slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/dark_brown_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- sixth slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/child_dark_brown_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+                <div class = "carousel-item"> <!-- seventh slide -->
+                    <div class="overlay-image" style = "background-image: url('static/pages/slides/red_brown_long.jpg');"></div>
+                    <div class = "container">
+                        <h1>Love is in the Hair</h1>
+                        <p>Let's add some love in your hair</p>
+                    </div>
+                </div>
+            </div>
+            <a href = "#myCarousel" class="carousel-control-prev" role = "button" data-slide = "prev">
+                <span class="sr-only"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a href = "#myCarousel" class="carousel-control-next" role = "button" data-slide = "next">
+                <span class="sr-only"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+        
+
+
+    </div>
+    <div class = "col-lg-2"></div>
+</div>
+<br>
+<div class = "row"></div>
+<br>
+<div class = "row"></div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "user_auth/base.html" %}
+
+{% load static %}
+
+{% block title %}Login Page{% endblock %}
+
+
+{% block main %}
+<div class = "row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4 gradient-custom">
+        <h3>Login</h3>
+        <br>
+        <form action="{% url 'user_auth:authenticate_user' %}" method = "POST">
+            {% csrf_token %}
+            <!-- Username input -->
+
+            <input type="text" name="username" placeholder="User" required class = "form-control"/>
+            <label class="form-label text-white" >Username</label>
+
+          
+            <!-- Password input -->
+
+            <input type = "password" name = "password1" class = "form-control"/>
+            <label class = "form-label text-white" >Password</label>
+
+          
+            <!-- 2 column grid layout for inline styling -->
+          
+                <!-- Submit button -->
+            <div>
+                <button type="submit" class="btn btn-primary btn-block mb-4" value = "Login">Sign in</button>
+            </div>
+          
+                <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? <a href="{% url 'user_auth:register' %}">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-5"></div>
+</div>
+<br>
+<div class = 'row'></div><br>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- about_us.html -->
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title%}About Us{% endblock %}
+{% block main %}
+<div class = "row">
+    <div class = "col-lg-1"></div>
+    <div class = "col-lg-6 gradient-custom text-white">
+        <div class="row">
+            <h1>About Us</h1>
+            <p>Johanni van Staden, the owner and operator of Love is in the Hair, is a professional hairstylist with more than two decades of experience. She established the business in 2017 and aimed at creating a professional salon with the comfort feel of home; a place where you can relax and enjoy being treated with the best quality haircare products.</p>
+            <p>Whatever the occasion, you can rest assure that you will receive the best advice, service and treatment to make you feel like a star.</p>
+        </div>
+        <br>
+        <div class="row">
+            <h1>Meet the team</h1>
+            <img src = "{% static 'pages/johanni_wedding.jpg' %}" alt = "Johanni Profile" class="rounded">
+            <p>Johanni van Staden - Owner and Stylist</p>
+        </div>
+    </div>
+    <div class = "col-lg-5"></div>
+</div>
+<br><div class = "row"></div><br>
+
+{% endblock %}

@@ -1,0 +1,168 @@
+/* General styling */ 
+
+.bg-custom-1 {
+    background-color: #af5480;
+  }
+  
+.bg-custom-2 {
+  background-image: linear-gradient(15deg, #E9A4C3 0%, #49c9ba 100%);
+  }
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f797d8;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(243, 9, 169, 0.35), rgba(36, 33, 221, 0.35));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(243, 9, 169, 0.35), rgba(36, 33, 221, 0.35))
+  }
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mask-custom {
+  backdrop-filter: blur(0px);
+  background-color: rgba(247,89,197,0.2);
+}
+
+body {
+  background-image: url("pages/Heart_in_hair.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.inline-img {
+  display: inline;
+  margin: 0 0.125em;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; 
+  margin: 0; 
+}
+
+[data-initials]:before {
+  background: #c143e7;
+  color: white;
+  opacity: 1; 
+  content: attr(data-initials); 
+  display: inline-block; 
+  font-weight: 600; 
+  border-radius: 50%; 
+  vertical-align: middle; 
+  margin-right: 0.5em; 
+  width: 50px; 
+  height: 50px; 
+  line-height: 50px; 
+  text-align: center; 
+  }
+
+/* styling for carousel */
+
+.carousel-item {
+  height: 32rem;
+  background: #000000;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+/* import css for star rating from chatgpt*/
+
+h1 {
+  text-align: center;
+  color: #f5efef;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  color: #ccc;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.rating label:before {
+  content: '\2605';
+}
+
+.rating input:checked ~ label {
+  color: #ffcc00;
+}
+
+button[type="submit"] {
+  background-color: #525252;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #ee8ae6;
+}

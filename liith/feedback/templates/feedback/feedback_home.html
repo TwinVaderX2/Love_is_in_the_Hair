@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block head %}<link rel = 'stylesheet'  href = "{% static 'pages/stylesheet.css' %}">{% endblock %}
+{% block title %}Love is in the Hair - Feedback{% endblock %}
+
+{% block main %} 
+
+{% if feedback_list %}
+<div class = 'row'>
+    <div class = 'col-lg-1'></div>
+    <div class = 'col-lg-4 gradient-custom'>       
+        <!-- star rating -->
+                
+        <h1>Feedback</h1>
+        <p class="text-white" style="text-align: center;">We love to hear from you.</p>
+
+        <form action="{% url 'feedback:review_rate' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder={{request.user.first_name}}>
+            </div>
+
+            <div class="form-group">
+            <label for="rating">Rating:</label>
+            <div class="rating">  
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"></label>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label for="comment">Feedback:</label>
+            <textarea id="comment" name="comment" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+        <div class="row"></div><br>
+    </div>
+    
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4 gradient-custom text-white">
+        <h1>Comments from our beloved clients</h1>
+        <br>
+        {% for idx in feedback_list %} 
+            <p>"{{ idx.comment }}" - {{idx.user.first_name}}</p>
+            <br>
+        {% endfor %}
+    </div>
+</div><br>
+<div class = 'row'>
+
+</div>
+    {% for review in review_list %}
+        <p>feedback</p>
+    {% endfor %}
+    
+{% else %}
+    <div class = 'row'>
+        <div class = 'col-lg-1'></div>
+        <div class = 'col-lg-4 gradient-custom'>       
+            <!-- star rating -->
+                    
+            <h1>Feedback</h1>
+            <p class="text-white" style="text-align: center;">We love to hear from you.</p>
+
+            <form action="submit_feedback.php" method="POST">
+                <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                <label for="rating">Rating:</label>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5"></label>
+                </div>
+                </div>
+
+                <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+
+            </form>
+            <div class="row"></div><br>
+        </div>
+        
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 gradient-custom">
+            <p>No polls are available.</p>
+        </div>
+    </div><br>
+    <div class = 'row'>
+    
+    </div>
+    
+{% endif %}
+
+{% endblock%}
