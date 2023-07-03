@@ -11,9 +11,9 @@ import sys
 import django
 
 sys.path.insert(0,os.path.abspath('..'))
-os.environ['DJANGO_SETTINGS_MODULE'] = pages.settings
-os.environ['DJANGO_SETTINGS_MODULE'] = feedback.settings
-os.environ['DJANGO_SETTINGS_MODULE'] = user_auth.settings
+os.environ['DJANGO_SETTINGS_MODULE'] = "LIITH.settings"
+# os.environ['DJANGO_SETTINGS_MODULE'] = "feedback.settings"
+# os.environ['DJANGO_SETTINGS_MODULE'] = "user_auth.settings"
 django.setup()
 
 project = 'LIITH'
