@@ -11,7 +11,13 @@ def user_login(request):
     return render(request, 'user_auth/login.html')
 
 def authenticate_user(request):
+    """
+    Function is used to authenticate the user.
 
+    :param request: data input from the website received via request
+
+    :return: directs user to appropriate page (if user is not found == register new user page; if user authenticated == home page)
+    """
     username = request.POST['username']
     password = request.POST['password1']
     user = authenticate(username=username, password=password)
@@ -22,14 +28,23 @@ def authenticate_user(request):
         login(request,user)
         return HttpResponseRedirect(reverse('pages:pages_home'))
     
-def show_user(request):
-    print(request.user.username)
-    return render(request, 'user_auth/user.html', {
-                                            "username": request.user.username,
-                                            "password": request.user.password
-                                            })
+# def show_user(request):
+#     print(request.user.username)
+#     return render(request, 'user_auth/user.html', {
+#                                             "username": request.user.username,
+#                                             "password": request.user.password
+#                                             })
 
 def register_user(request):
+    """
+    function creates new user
+
+    :param request: data input from the website received via request
+
+    :return: directs user to appropriate page (if user registration is successful == home page)
+
+    """
+
     # checks if form is being posted 
     if request.method == 'POST':
         form = NewUserForm(request.POST)
@@ -51,6 +66,9 @@ def register_user(request):
         return render(request = request, template_name = 'user_auth/user_registration.html', context = {'register_form':form})
     
 def logout_view(request):
+    """
+    Function logs out user
+    """
     logout(request)
 
         
