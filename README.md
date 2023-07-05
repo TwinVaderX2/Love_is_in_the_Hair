@@ -23,11 +23,12 @@ Follow these steps:
 * Python
 
 ### Installation
-1. Copy files to directory on your PC
-2. create virtual environment
-3. activate virtual environment and install requirements from requirements.txt
-4. start server using command: python manage.py runserver
-5. Access website from browser URL: http://127.0.0.1:8000/
+1. Clone repository
+2. In the command line, cd into directory, and create virtual environment (python -m venv [name])
+3. Activate virtual environment using command: ([name]\Scripts\activate)
+4. Install requirements from requirements.txt using command: (python -m pip install -r requirements.txt)
+5. start server using command: (python manage.py runserver)
+6. Access website from browser URL: http://127.0.0.1:8000/
 
 ## User guide
 Navigate through website by clicking the links
@@ -52,5 +53,5 @@ Feedback column on right of screen will be updated
 
 
 
-Author notes:
+###### Author notes:
 The wibesite was created with input from the owner of the company, Love Is In The Hair.
