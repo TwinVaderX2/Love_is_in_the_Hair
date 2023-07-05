@@ -30,6 +30,23 @@ Follow these steps:
 5. start server using command: (python manage.py runserver)
 6. Access website from browser URL: http://127.0.0.1:8000/
 
+## Installation and requirements (Docker)
+### Requirements
+* Python
+* Docker (download docker desktop from https://www.docker.com/products/docker-desktop/)
+* Docker account (if you don not have one register your new account here https://hub.docker.com/signup)
+
+
+
+### Installation
+1. Clone repository
+2. In the command line, cd into directory, and create virtual environment (python -m venv [name])
+3. Activate virtual environment using command: ([name]\Scripts\activate)
+4. Install requirements from requirements.txt using command: (python -m pip install -r requirements.txt)
+5. start server using command: (python manage.py runserver)
+6. Access website from browser URL: http://127.0.0.1:8000/
+
+
 ## User guide
 Navigate through website by clicking the links
 CompanyLogo: Homepage
