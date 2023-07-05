@@ -28,6 +28,12 @@ Follow these steps:
 3. Activate virtual environment using command: ([name]\Scripts\activate)
 4. Install requirements from requirements.txt using command: (python -m pip install -r requirements.txt)
 5. start server using command: (python manage.py runserver)
+Confirmation message should appear in terminal with following message:
+System check identified no issues (0 silenced).
+[date and time]
+Django version 4.2, using settings 'LIITH.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
 6. Access website from browser URL: http://127.0.0.1:8000/
 
 ## Installation and requirements (Docker)
@@ -36,14 +42,20 @@ Follow these steps:
 * Docker (download docker desktop from https://www.docker.com/products/docker-desktop/)
 * Docker account (if you don not have one register your new account here https://hub.docker.com/signup)
 
-
-
 ### Installation
 1. Clone repository
-2. In the command line, cd into directory, and create virtual environment (python -m venv [name])
-3. Activate virtual environment using command: ([name]\Scripts\activate)
-4. Install requirements from requirements.txt using command: (python -m pip install -r requirements.txt)
-5. start server using command: (python manage.py runserver)
+2. Run Docker desktop and log in
+2. In the command line, cd into directory (wher you cloned the repository)
+3. cd into LIITH directory
+4. Run command: (docker build -t [name your image] .)
+Once completed an image (with the name you chose above) will apear under the images tab in the docker desktop app
+5. In command line run: docker run -p 8000:8000 [name of image]
+Confirmation message should appear in terminal with following message:
+System check identified no issues (0 silenced).
+[date and time]
+Django version 4.2, using settings 'LIITH.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
 6. Access website from browser URL: http://127.0.0.1:8000/
 
 
